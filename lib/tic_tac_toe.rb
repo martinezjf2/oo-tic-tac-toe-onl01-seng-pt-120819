@@ -3,7 +3,7 @@
 
 
 ## Ask Annabel on a 1 x 1 to explain this lab even further with me
-
+require "pry"
 
 class TicTacToe
 
@@ -39,7 +39,9 @@ def move(index, token = "X")
 end
 
 def position_taken?(index)   ### Need a further more explanation towards this to undersand it more
-  !(@board[index].nil? || @board[index] == " ")
+  # !(@board[index].nil? || @board[index] == " ")
+  @board[index] != " "
+  # binding.pry
 end
 
 def valid_move?(index)
